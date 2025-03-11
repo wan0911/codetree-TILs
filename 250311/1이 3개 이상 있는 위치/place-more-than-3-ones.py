@@ -3,8 +3,8 @@ grid = [list(map(int, input().split())) for _ in range(n)]
 dx, dy = [0, 0, -1, 1], [1, -1, 0, 0]
 result = 0
 
-for i in range(4):
-    for j in range(4):
+for i in range(n):
+    for j in range(n):
         cnt = 0
         for k in range(4):
             x, y = i + dx[k], j + dy[k]
