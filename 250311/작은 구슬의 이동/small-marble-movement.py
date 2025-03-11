@@ -18,7 +18,7 @@ move_dir = mapper[D]
 dk = 1 if move_dir == 0 or 2 else -1
 while T > 0:
     T -= 1
-    if move_dir == 0 or 3:
+    if move_dir == 0 or move_dir == 3:
         y = y + dk
         if y == 0 or y == N-1:
             T -= 1
