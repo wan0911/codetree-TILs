@@ -21,7 +21,12 @@ while T > 0:
     T -= 1
     if move_dir == 0 or move_dir == 3:
         y = y + dk
-        if y == 0 or y == N-1:
+        if y < 0:
+            y = 0
+        elif y > N-1:
+            y = N-1
+
+        if y <= 0 or y >= N-1:
             T -= 1
             if dk == -1:
                 dk = 1
@@ -29,7 +34,12 @@ while T > 0:
                 dk = -1
     else:
         x = x + dk
-        if x == 0 or x == N-1:
+        if x < 0:
+            x = 0
+        elif x > N-1:
+            x = N-1
+
+        if x <= 0 or x >= N-1:
             T -= 1
             if dk == -1:
                 dk = 1
