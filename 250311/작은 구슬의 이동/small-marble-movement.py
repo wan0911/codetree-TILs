@@ -3,6 +3,7 @@
 # 각 양단 끝에 부딪히면, 방향 전환 dx => +1 / -1
 
 # 상하좌우, x/y 모든 경우에 대해 만들어야 함
+# 원점 주의..
 
 N, T = map(int, input().split())
 R, C, D = input().split()
@@ -15,7 +16,7 @@ mapper = {
 }
 
 move_dir = mapper[D]
-dk = 1 if move_dir == 0 or 2 else -1
+dk = 1 if (move_dir == 0 or move_dir == 1) else -1
 while T > 0:
     T -= 1
     if move_dir == 0 or move_dir == 3:
